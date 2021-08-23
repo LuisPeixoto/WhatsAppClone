@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappclone/pages/chats.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -46,7 +47,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         controller: _tabController,
         children: [
           Center(child: Icon(Icons.camera_alt)),
-          Center(child: Text('CONVERSAS')),
+          ListView.builder(
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return Chats();
+            },
+            
+          ),
           Text('STATUS'),
           Text('CHAMADAS'),
       ],),
