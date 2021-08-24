@@ -50,7 +50,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           ListView.builder(
             itemCount: 10,
             itemBuilder: (context, index) {
-              return Chats();
+              return Column(
+                children: [
+                  Chats(images:'assets/user/HomemAranha.jpeg', title:'Peter Parker', message: 'Lorem ipsum nec mollis, quis'),
+                  Chats(images:'assets/user/CapitaoAmerica.jpeg', title:'Capitão América', message: 'Lorem ipsum nec mollis, quis'),
+                  Chats(images:'assets/user/HomemDeFerro.png', title:'Homem de ferro', message: 'Lorem ipsum nec mollis, quis'),
+                  Chats(images:'assets/user/Hulk.jpeg', title:'Hulk', message: 'Lorem ipsum nec mollis, quis'),
+                  Chats(images:'assets/user/ViuvaNegra.jpg', title:'Viúva Negra', message: 'Lorem ipsum nec mollis, quis'),
+
+                ],
+              );
             },
             
           ),
